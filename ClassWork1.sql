@@ -15,7 +15,7 @@ CREATE TABLE Employees
 (
 	Id int constraint PK_Employees_Id primary key identity,
 	FullName nvarchar(50) not null constraint CK_Employees_FullName check(len(FullName)>3),
-	Salary money constraint CK_Employees_Salary check(len(Salary)>0),
+	Salary money constraint CK_Employees_Salary check(Salary>0),
 	DepartmentId int constraint FK_Employees_DepartmentId foreign key references Departments(Id) ,  
 	Email nvarchar(50) not null constraint UQ_Employees_Email unique
 )
