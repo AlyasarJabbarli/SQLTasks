@@ -139,7 +139,7 @@ SELECT Phones.Name , Brands.Name as BrandName FROM Phones Join Brands on Phones.
 
 --5) Brand Adinin Terkibinde s Olan Butun Notebooklari Cixardan Query.
 
-SELECT Name FROM Brands WHERE Name like '%s%'
+SELECT Notebooks.id , Notebooks.Name , Notebooks.Price , Notebooks.BrandId FROM Notebooks Join Brands on Notebooks.BrandId = Brands.id WHERE Brands.Name like '%s%'
 
 --6) Qiymeti 2000 ve 5000 arasi ve ya 5000 den yuksek Notebooklari Cixardan Query.
 
